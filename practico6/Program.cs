@@ -12,12 +12,13 @@ Console.WriteLine("valor de b:"+b);
 
 // Ejercicio 1
 
-
+/* 
 int num = 0;
 string aux;
 int resto;
 Console.WriteLine("Ingrese un numero: ");
-aux = Console.ReadLine();
+string? input = Console.ReadLine();
+aux = input ?? string.Empty;
 bool resultado = int.TryParse(aux, out num);
 if (resultado == true)
 {
@@ -34,3 +35,7 @@ else
 {
     Console.WriteLine("No se ingresó un numero.");
 }
+*/
+
+// Ejercicio 4
+
