@@ -12,7 +12,7 @@ Console.WriteLine("valor de b:"+b);
 
 // Ejercicio 1
 
-
+/* 
 int num = 0;
 string aux;
 int resto;
@@ -34,3 +34,41 @@ else
 {
     Console.WriteLine("No se ingresó un numero.");
 }
+*/
+
+// CalculadoraV1
+
+float a, b, c = 0;
+int aux;
+do
+{
+    Console.WriteLine("Calculadora V1\n0 - Salir\n1 - Suma\n2 - Resta\n3 - Multiplicacion\n4 - Division\nIngrese una opcion: ");
+    int.TryParse(Console.ReadLine(), out aux);
+    if (aux != 0)
+    {
+        Console.Write("Ingrese el valor de a: ");
+        float.TryParse(Console.ReadLine(), out a);
+
+        Console.Write("Ingrese el valor de b: ");
+        float.TryParse(Console.ReadLine(), out b);
+        switch (aux)
+        {
+            case 1:
+                c = a + b;
+                break;
+            case 2:
+                c = a - b;
+                break;
+            case 3:
+                c = a * b;
+                break;
+            case 4:
+                c = a / b;
+                break;
+            default:
+                break;
+        }
+        Console.WriteLine("\nEl resultado de la operación entre " + a + " y " + b + " es: " + c);
+    }
+} while (aux != 0);
+Console.WriteLine("\nFin del programa");
